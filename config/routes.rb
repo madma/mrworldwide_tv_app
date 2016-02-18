@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
 
+  root "videos#index"
+
   # when get a /videos request, route it to the videos controller which controls all the actions for video resource
   get "/videos" => "videos#index"
+
+  get "/videos/new" => "videos#new"
+
+  post "/videos" => "videos#create"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
